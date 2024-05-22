@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../html/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Register</h1>
+        <form id="registrationForm" method="POST" onsubmit="return validateRegistrationForm()">
+            <label for="reg-username">Username:</label>
+            <input type="text" id="reg-username" name="username" required pattern="^[a-zA-Z0-9]{5,12}$">
+            <label for="reg-email">Email:</label>
+            <input type="email" id="reg-email" name="email" required>
+            <label for="reg-password">Password:</label>
+            <input type="password" id="reg-password" name="password" required>
+            <label for="userType">User Type:</label>
+            <select id="userType" name="userType" required>
+                <option value="" disabled selected>Select the type of user you are</option>
+                <option value="Buyer">Buyer</option>
+                <option value="Seller">Seller</option>
+            </select>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Lorem Ipsum. All rights reserved.</p>
+    </footer>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
